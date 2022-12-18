@@ -5,6 +5,7 @@
 //то показувати через alert: "True!"
 //у противному випадку показати:"Don't you know? ECMAScript!"
 
+// variant1
 // const text = 'ECMAScript';
 // const answer = prompt('What is the official name of JavaScript?');
 // if (answer === text) {
@@ -12,3 +13,9 @@
 // } else {
 //     alert("Don't you know? ECMAScript!");
 // }
+
+// variant2
+// const text = 'ECMAScript';
+// const answer = prompt('What is the official name of JavaScript?');
+// const message = answer === text ? ('True!') : ("Don't you know? ECMAScript!");
+// alert(message);
