@@ -30,3 +30,14 @@
 // const minutes = String(answer % 60).padStart(2, "0");
 // const hours = String(Math.floor(answer / 60)).padStart(2, "0");
 // console.log(`${hours}:${minutes}`);
+
+
+//3. Напишіть цикл, який виведе в консоль усі парні числа від max до min включно по зменшенню
+// const max = 15;
+// const min = 1;
+
+// for (let i = max; i >= min; i -= 1) {
+//     if (i % 2 === 0) {
+//         console.log(`Число парне ${i}`);
+//      } 
+// }
