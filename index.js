@@ -124,3 +124,17 @@
 // }
 
 // console.log(message);
+
+//6. При завантаженні сторінки користувачу у prompt пропонується ввести число 'Hello, enter please the number'.
+// Введене число додається до значення змінної total.
+//Операція введення числа продовжується до тих пір, поки користувач не натисне кнопку Cancel у prompt.
+//Після того, як користувач припинив серію введень і натиснув кнопку Cancel, показати alert з рядком "The total sum of the entered numbers is [total]."
+
+
+// let total = 0;
+// let number
+// while (number !== null) {
+//     number = prompt('Hello, enter please the number');
+//     total += Number(number);
+// }
+// alert(`The total sum of the entered numbers is ${total}.`)
