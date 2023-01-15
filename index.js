@@ -258,4 +258,18 @@
 // console.log(calculator.sum());
 
 
+//6. Напишіть функцію updateObject, яка приймає об'єкт та перелік ключів
+//і повертає новий об'єкт без вказаних властивостей
+//Очікуваний результат ({ a: 1, b: 2, c: 3 }, 'b', 'c') => {a: 1}
 
+
+// const updateObject = (object, ...keys) => {
+//     const newObject = {...object};
+//     keys.forEach(key => {
+//         delete newObject[key]
+//    }
+//    );
+//    return  newObject;
+// }
+
+// console.log(updateObject({ a: 1, b: 2, c: 3 }, 'c'));
