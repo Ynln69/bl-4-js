@@ -273,3 +273,24 @@
 // }
 
 // console.log(updateObject({ a: 1, b: 2, c: 3 }, 'c'));
+
+// 7. Напишіть функцію changeObject, яка приймає як параметр об'єкт
+// та повертає масив, в якому кожен елемент це масив, 
+// який складається з двох елементів [key, value]
+// Очікуваний результат 
+// console.log(changeObject({ a: 1, b: 2, c: 3 })) // [["a", 1], ["b", 2], ["c", 3]]
+
+// const user = {
+//   name: 'John',
+//   surName: 'Stones',
+//   age: 20,
+//   hobby: 'tenis',
+//   haveCar: true,
+//   merried: false,
+// }
+
+// const changeObject = (user) => {
+//    return Object.entries(user);
+// }
+
+// console.log(changeObject(user));
