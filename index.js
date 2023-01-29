@@ -366,7 +366,6 @@
 
 // makeProduct('apple', 10, showProduct);
 
-
 // 3. Напишіть функцію makeShef(shefName), яка повертає функцію
 //makeDish(dish), яка памятає ім'я шефа під час її виклику
 //Функція makeDish має логіровать "<shef> is cooking <dish>"
@@ -374,7 +373,7 @@
 // const makeShef = function (shefName) {
 //   const makeDish = function (dish) {
 //     console.log(`${shefName} is cooking ${dish}`);
-//   } 
+//   }
 //   return makeDish;
 // }
 
@@ -384,6 +383,27 @@
 // natali('steak');
 // natali('pelmeni')
 
-
 // const ivan = makeShef('Ivan');
 // ivan('borshch')
+
+// 4. Виправте помилки, щоб код працював
+// const product = {
+//   price: 5000,
+//   showPrice() {
+//     console.log(this.price);
+//   },
+// };
+// product.showPrice();
+
+// 5. Виправте код, щоб він працював
+// function callAction(action) {
+//   action();
+// }
+// const item = {
+//   quantity: 5,
+//   getQuantity() {
+//     console.log(this.quantity);
+//   },
+// };
+
+// callAction(item.getQuantity.bind(item));
