@@ -365,3 +365,25 @@
 // }
 
 // makeProduct('apple', 10, showProduct);
+
+
+// 3. Напишіть функцію makeShef(shefName), яка повертає функцію
+//makeDish(dish), яка памятає ім'я шефа під час її виклику
+//Функція makeDish має логіровать "<shef> is cooking <dish>"
+
+// const makeShef = function (shefName) {
+//   const makeDish = function (dish) {
+//     console.log(`${shefName} is cooking ${dish}`);
+//   } 
+//   return makeDish;
+// }
+
+// makeShef("Natali")("steak");
+
+// const natali = makeShef('Natali');
+// natali('steak');
+// natali('pelmeni')
+
+
+// const ivan = makeShef('Ivan');
+// ivan('borshch')
