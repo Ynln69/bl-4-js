@@ -130,7 +130,6 @@
 //Операція введення числа продовжується до тих пір, поки користувач не натисне кнопку Cancel у prompt.
 //Після того, як користувач припинив серію введень і натиснув кнопку Cancel, показати alert з рядком "The total sum of the entered numbers is [total]."
 
-
 // let total = 0;
 // let number
 // while (number !== null) {
@@ -138,7 +137,6 @@
 //     total += Number(number);
 // }
 // alert(`The total sum of the entered numbers is ${total}.`)
-
 
 //1. Напишіть скрипт, який для об'єкта user, послідовно:
 //1 додасть властивість mood зі значенням 'happy'
@@ -168,9 +166,6 @@
 //     console.log(`${key}: ${user[key]}`);
 // }
 
-
-
-
 // console.log(user);
 
 // 2. Є об'єкт, в якому зберігаються зарплати команди. Напишіть функцію getTotalSalary, яка буде повертати загальну суму зарплат. Якщо об'єкт пустий, то функція має повернути 0
@@ -190,9 +185,6 @@
 // }
 
 // console.log(total)
-
-
-
 
 //3. Напишіть фукцію calcTotalPrice(stones, stonesName),
 //яка приймає масив об'єктів і рядок з назвою каменю.
@@ -218,13 +210,6 @@
 // console.log(calcTotalPrice(stones, 'emerald'));
 // console.log(calcTotalPrice(stones, 'rubble'));
 
-
-
-
-
-
-
-
 // 4. Створіть об'єкт calculator з трьома методами
 // read(a, b) - приймає два аргумента та зберігає їх як властивості об'єкта під ключами prop1 та prop2
 // sum() перевіряє чи присутні  властивості prop1/prop2 та повертає їх суму, в противному випадку повертає null
@@ -243,10 +228,10 @@
 //         }
 
 //     return this.prop1&&this.prop2?Number(this.prop1) + Number(this.prop2):null;
-      
+
 //   },
 //     mult() {
-      
+
 //         return this.prop1&&this.prop2?this.prop1 * this.prop2:null
 //   },
 // };
@@ -257,11 +242,9 @@
 
 // console.log(calculator.sum());
 
-
 //6. Напишіть функцію updateObject, яка приймає об'єкт та перелік ключів
 //і повертає новий об'єкт без вказаних властивостей
 //Очікуваний результат ({ a: 1, b: 2, c: 3 }, 'b', 'c') => {a: 1}
-
 
 // const updateObject = (object, ...keys) => {
 //     const newObject = {...object};
@@ -344,14 +327,12 @@
 //   }
 // }
 
-
 //Напишіть дві функції
 // letMeSeeYourName(callback) - запитує ім'я користувача
 //через prompt і викликає callback функцію
 //greet(name) - це коллбек, яка приймає ім'я і логує в консолі
 //рядок "Hi, <name>"
 //Реалізуй перевірку, що prompt не пустий
-
 
 // const letMeSeeYourName = function (callback) {
 //     const userName = prompt('Введіть ім\'я користувача');
@@ -366,4 +347,21 @@
 
 // letMeSeeYourName(greet)
 
+// 2. Напишіть дві функції
+//makeProduct(name, price, callback) - приймає
+//ім'я та ціну товару, а також callback.
+//Функція створює об'єкт товару, додаючи йому унікальний
+//ідентіфікатор у властивість id та викликає callback
+//передаючи йому створений об'єкт.
+//showProduct(product) - коллбек, що приймає об'єкт
+//продукта і логірує його в консоль
 
+// const makeProduct = (name, price, callback) => {
+//   const product = { name, price, id: Math.random() };
+//   callback(product);
+// };
+// function showProduct(product) {
+//   console.log(product);
+// }
+
+// makeProduct('apple', 10, showProduct);
