@@ -210,7 +210,7 @@
 //     for (const stone of stones) {
 //         if (stone.name === stonesName) {
 //            totalPrice += stone.price * stone.quantity;
-//         } 
+//         }
 //     }
 //     return totalPrice;
 // }
@@ -275,9 +275,9 @@
 // console.log(updateObject({ a: 1, b: 2, c: 3 }, 'c'));
 
 // 7. Напишіть функцію changeObject, яка приймає як параметр об'єкт
-// та повертає масив, в якому кожен елемент це масив, 
+// та повертає масив, в якому кожен елемент це масив,
 // який складається з двох елементів [key, value]
-// Очікуваний результат 
+// Очікуваний результат
 // console.log(changeObject({ a: 1, b: 2, c: 3 })) // [["a", 1], ["b", 2], ["c", 3]]
 
 // const user = {
@@ -343,3 +343,27 @@
 //     getTotalSumByType(type) {},
 //   }
 // }
+
+
+//Напишіть дві функції
+// letMeSeeYourName(callback) - запитує ім'я користувача
+//через prompt і викликає callback функцію
+//greet(name) - це коллбек, яка приймає ім'я і логує в консолі
+//рядок "Hi, <name>"
+//Реалізуй перевірку, що prompt не пустий
+
+
+// const letMeSeeYourName = function (callback) {
+//     const userName = prompt('Введіть ім\'я користувача');
+//     if (!userName) {
+//         return alert("Error!")
+//     }
+//     callback(userName);
+// }
+// const greet = function (name) {
+//     console.log(`Hi, ${name}`);
+// }
+
+// letMeSeeYourName(greet)
+
+
