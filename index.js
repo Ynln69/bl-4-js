@@ -482,43 +482,56 @@
 //     : ((inputEl.type = 'text'), (buttonEl.textContent = 'Hide'));
 // }
 
-
 /*
 Задача 4
 Кнопка "Decrease" робить квадрат меньше на 10 пікселів, кпопка "Increase" - більше на 10 пикселів.
 */
 
-const btnDecreaseRef = document.querySelector('#decrease');
-const btnIncreaseRef = document.querySelector('#increase');
-const boxRef = document.querySelector('#box');
+// const btnDecreaseRef = document.querySelector('#decrease');
+// const btnIncreaseRef = document.querySelector('#increase');
+// const boxRef = document.querySelector('#box');
 
-btnDecreaseRef.addEventListener('click', onBtnDecrClick);
+// btnDecreaseRef.addEventListener('click', onBtnDecrClick);
 
-function onBtnDecrClick(event) {
+// function onBtnDecrClick(event) {
 
-    const widthBox = boxRef.offsetWidth;
+//     const widthBox = boxRef.offsetWidth;
 
-    boxRef.style.width = `${widthBox - 10}px`
-    boxRef.style.height = `${widthBox - 10}px`
-    
-}
+//     boxRef.style.width = `${widthBox - 10}px`
+//     boxRef.style.height = `${widthBox - 10}px`
 
-btnIncreaseRef.addEventListener('click', onBtnIncrClick);
+// }
 
-function onBtnIncrClick(event) {
+// btnIncreaseRef.addEventListener('click', onBtnIncrClick);
 
-    const widthBox = boxRef.offsetWidth;
+// function onBtnIncrClick(event) {
 
-    boxRef.style.width = `${widthBox + 10}px`
-    boxRef.style.height = `${widthBox + 10}px`
-    
-}
-    
+//     const widthBox = boxRef.offsetWidth;
 
+//     boxRef.style.width = `${widthBox + 10}px`
+//     boxRef.style.height = `${widthBox + 10}px`
 
-btnDecreaseRef.textContent = "Decrease"
+// }
 
-btnIncreaseRef.textContent  = "Increase"
+// btnDecreaseRef.textContent = "Decrease"
 
+// btnIncreaseRef.textContent  = "Increase"
 
+/*
+Задача 5
+Додайте слухача по кліку та визначте, коли клік відбувається
+в середині елемента з id "place" і коли клік відбувається поза зоною елемента
+https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
+*/
 
+// const divPlace = document.querySelector('#place');
+
+// document.addEventListener('click', isPlace);
+
+// function isPlace(e) {
+//   if (divPlace.contains(e.target)) {
+//     return console.log('inside');
+//   }
+
+//   console.log('outside');
+// }
