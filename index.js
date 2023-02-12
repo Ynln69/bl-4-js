@@ -535,3 +535,21 @@ https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
 
 //   console.log('outside');
 // }
+
+/*
+Задача 6
+По кліку на кнопку "Double" збільшіть значення
+в кожному елементі списку у 2 рази
+*/
+
+const listEl = document.querySelector('.list');
+
+const itemsEl = document.querySelectorAll('.listItem');
+
+const btnEl = document.querySelector('#double');
+
+btnEl.addEventListener('click', onClick);
+
+function onClick() {
+  itemsEl.forEach(item => (item.textContent *= 2));
+}
