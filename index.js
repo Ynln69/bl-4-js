@@ -481,3 +481,44 @@
 //     ? ((inputEl.type = 'password'), (buttonEl.textContent = 'Show'))
 //     : ((inputEl.type = 'text'), (buttonEl.textContent = 'Hide'));
 // }
+
+
+/*
+Задача 4
+Кнопка "Decrease" робить квадрат меньше на 10 пікселів, кпопка "Increase" - більше на 10 пикселів.
+*/
+
+const btnDecreaseRef = document.querySelector('#decrease');
+const btnIncreaseRef = document.querySelector('#increase');
+const boxRef = document.querySelector('#box');
+
+btnDecreaseRef.addEventListener('click', onBtnDecrClick);
+
+function onBtnDecrClick(event) {
+
+    const widthBox = boxRef.offsetWidth;
+
+    boxRef.style.width = `${widthBox - 10}px`
+    boxRef.style.height = `${widthBox - 10}px`
+    
+}
+
+btnIncreaseRef.addEventListener('click', onBtnIncrClick);
+
+function onBtnIncrClick(event) {
+
+    const widthBox = boxRef.offsetWidth;
+
+    boxRef.style.width = `${widthBox + 10}px`
+    boxRef.style.height = `${widthBox + 10}px`
+    
+}
+    
+
+
+btnDecreaseRef.textContent = "Decrease"
+
+btnIncreaseRef.textContent  = "Increase"
+
+
+
