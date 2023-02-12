@@ -542,14 +542,44 @@ https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
 в кожному елементі списку у 2 рази
 */
 
-const listEl = document.querySelector('.list');
+// const listEl = document.querySelector('.list');
 
-const itemsEl = document.querySelectorAll('.listItem');
+// const itemsEl = document.querySelectorAll('.listItem');
 
-const btnEl = document.querySelector('#double');
+// const btnEl = document.querySelector('#double');
 
-btnEl.addEventListener('click', onClick);
+// btnEl.addEventListener('click', onClick);
 
-function onClick() {
-  itemsEl.forEach(item => (item.textContent *= 2));
-}
+// function onClick() {
+//   itemsEl.forEach(item => (item.textContent *= 2));
+// }
+
+// Задача 7
+// При кліку на коло воно має слідувати за курсором.
+// При повторному кліку воно стає у початкове положення.
+// https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/MouseEvent
+// https://developer.mozilla.org/ru/docs/Web/API/MouseEvent/pageX
+// https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
+
+// const littleCircle = document.querySelector('.innerCircle');
+
+// littleCircle.addEventListener('click', onClick);
+
+// function onClick(e) {
+//   littleCircle.style.position === 'absolute'
+//     ? ((littleCircle.style.position = 'static'),
+//       document.removeEventListener('mousemove', onMoveMouse),
+//       (littleCircle.style.transform = ''),
+//       (littleCircle.style.top = 0),
+//       (littleCircle.style.left = 0))
+//     : ((littleCircle.style.position = 'absolute'),
+//       document.addEventListener('mousemove', onMoveMouse));
+// }
+
+// function onMoveMouse(evt) {
+//   const left = evt.pageX;
+//   const top = evt.pageY;
+//   littleCircle.style.left = `${left}px`;
+//   littleCircle.style.top = `${top}px`;
+//   littleCircle.style.transform = 'translate(-50%, -50%)';
+// }
