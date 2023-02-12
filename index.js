@@ -427,3 +427,18 @@
 //     return arr * 2;
 // }
 // console.log(each([1, 2, 3], callback))
+
+
+/*
+Задача 1
+Натискання на кнопку "SHOW ME" має виводити значення з поля введення (подивіться на елементи розмітки в html файлі)
+*/
+
+const input = document.querySelector('#alertInput');
+const btn = document.querySelector('#alertButton');
+
+btn.addEventListener('click', onButtonClick);
+function onButtonClick(event) {
+    alert(`Message: ${input.value}`);
+}
+
