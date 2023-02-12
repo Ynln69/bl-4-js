@@ -415,7 +415,6 @@
 //якого будуть результати виклику callback.
 //callback функція має множити елементи на 2
 
-
 // const each = function (array, callback) {
 //     let newArray = [];
 //     for (const arr of array) {
@@ -427,7 +426,6 @@
 //     return arr * 2;
 // }
 // console.log(each([1, 2, 3], callback))
-
 
 /*
 Задача 1
@@ -442,23 +440,44 @@
 //     alert(`Message: ${input.value}`);
 // }
 
-
-
-
 /*
 Задача 2
 При натисканні на кнопку "SWAP ME" виконується обмін змісту між двома інпутами. 
 Можна нажимати на неї декілька разів або вручну змінити вміст інпутів. */
 
+// const btn = document.querySelector('#swapButton');
+// const leftInput = document.querySelector('#leftSwapInput');
+// const rightInput = document.querySelector('#rightSwapInput');
 
-const btn = document.querySelector('#swapButton');
-const leftInput = document.querySelector('#leftSwapInput');
-const rightInput = document.querySelector('#rightSwapInput');
+// btn.addEventListener('click', onBtnClick);
 
-btn.addEventListener('click', onBtnClick);
+// function onBtnClick() {
+//     const acc = leftInput.value;
+//     leftInput.value = rightInput.value;
+//     rightInput.value = acc;
+// }
 
-function onBtnClick() {
-    const acc = leftInput.value;
-    leftInput.value = rightInput.value;
-    rightInput.value = acc;
-}
+/*
+Задача 3
+Кнопка "Hide" ховає текст (замість літер - зірочки) і заміняє назву кнопки на
+"Show", при повторному натисканні текст знову стає доступний (замість зірочок - літери) і кнопка приймає початковий вигляд.
+*/
+
+// const buttonEl = document.querySelector('#passwordButton');
+// const inputEl = document.querySelector('#passwordInput');
+
+// buttonEl.addEventListener('click', onClickButton);
+
+// function onClickButton(evn) {
+// if (inputEl.type !== 'password') {
+//   inputEl.type = 'password';
+//   buttonEl.textContent = 'Show';
+//   return;
+// }
+// inputEl.type = 'text';
+//   // buttonEl.textContent = 'Hide';
+//   2варіант
+//   inputEl.type !== 'password'
+//     ? ((inputEl.type = 'password'), (buttonEl.textContent = 'Show'))
+//     : ((inputEl.type = 'text'), (buttonEl.textContent = 'Hide'));
+// }
