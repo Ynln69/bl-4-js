@@ -583,3 +583,183 @@ https://developer.mozilla.org/en-US/docs/Web/API/Node/contains
 //   littleCircle.style.top = `${top}px`;
 //   littleCircle.style.transform = 'translate(-50%, -50%)';
 // }
+
+/**
+ * ЗАДАЧА 8
+ * Створи перелік справ.
+ * Є  інпут, в який вноситься зміст задачі.
+ * При натисканні на кнопку "Додати" задача додається в список #list.
+ * Поруч з кожною задачею знаходится кнопка "Видалити", щоб можна було
+ * видалити цю задачу із списку.
+ * Список з задачами має бути доступним після перезавантаження сторінки.
+ */
+
+// const form = document.querySelector('#task-form');
+// const list = document.querySelector('#task-list');
+// const LOCAL_KEY = 'Tasks';
+
+// let id = 1;
+// form.addEventListener('submit', onFormSubmit);
+
+// function onFormSubmit(event) {
+//   event.preventDefault();
+//   const task = event.target.elements.taskName.value;
+//   // get and set data from/to localStorage
+//   const dataFromLS = JSON.parse(
+//     localStorage.getItem(LOCAL_KEY) ? localStorage.getItem(LOCAL_KEY) : '[]'
+//   );
+//   localStorage.setItem(LOCAL_KEY, JSON.stringify([...dataFromLS, task]));
+//   // set id and adds elements to DOM
+//   id += 1;
+//   addMarkup(task, id);
+//   // form reset
+//   form.reset();
+//   // create link remove button and add event-listener selected task
+//   const removeBtn = document.querySelector(`[data-id="${id}"]`);
+//   removeBtn.addEventListener('click', removeBtnClick);
+// }
+// function removeBtnClick(event) {
+//   // get array data from local storage
+//   const dataFromLocalStorage = JSON.parse(localStorage.getItem(LOCAL_KEY));
+//   // get text task to remove
+//   const task = event.target.closest('li').querySelector('p').textContent;
+//   // find index of selected task
+//   const index = dataFromLocalStorage.indexOf(task);
+//   // remove selected task
+//   dataFromLocalStorage.splice(index, 1);
+//   // add new task-array
+//   localStorage.setItem(LOCAL_KEY, JSON.stringify(dataFromLocalStorage));
+//   // clear selected task from DOM
+//   event.target.closest('li').remove();
+// }
+// function addMarkup(task, id) {
+//   list.insertAdjacentHTML(
+//     'beforeend',
+//     `<li><p>${task}</p><button type='button' data-id='${id}'>Видалити</button></li>`
+//   );
+// }
+// function newTaskList() {
+//   if (!localStorage.getItem(LOCAL_KEY)) {
+//     return;
+//   }
+//   const dataFromLocalStorage = JSON.parse(localStorage.getItem(LOCAL_KEY));
+//   const arrayElements = dataFromLocalStorage.map(el => {
+//     id += 1;
+//     return `<li><p>${el}</p><button type='button' data-id='${id}'>Видалити</button></li>`;
+//   });
+//   const markup = arrayElements.join('');
+//   list.insertAdjacentHTML('beforeend', markup);
+
+//   const arrBtn = list.querySelectorAll('button');
+//   arrBtn.forEach(element => {
+//     element.addEventListener('click', removeBtnClick);
+//   });
+// }
+// newTaskList();
+
+/**
+ * ЗАДАЧА 1
+ * Перероби функцію на проміс таким чином, щоб проміс повертав значення
+ * через 2 секунди після виклику функції
+ */
+// function greet() {
+//   return 'hello world';
+// }
+
+/**
+ * ЗАДАЧА 2
+ * - Використовуй prompt і повертай результат його виклику.
+ * - Створи функцію, в середині якої буде проміс.
+ * Якщо значення не є числом, відклоняй проміс і логуй "error".
+ * Якщо значення парне, обробляй проміс і повертай рядок "even" через 1 секунду.
+ * Якщо значення не парне, обробляй проміс і повертай рядок "odd" через 2 секунди.
+ */
+/**
+ * ЗАДАЧА 3
+ *
+ * Якщо ємейл і пароль користувача співпадають, під час сабміта зберігай данні з форми
+ * в локальне сховище і змінюй кнопку login на logout та роби поле введення
+ * недоступним для змін.
+ * При перезавантаженні сторінки, якщо користувач залогінився, ми маємо бачити logout-кнопку
+ * та недоступні для змін поля з данними користувача.
+ * Клік по кнопці logout повертає усе в первинний стан і видаляє данні користувача
+ * з локального сховища.
+ *
+ * Якщо введені данні не співпадають з необхідними данними, викликати аlert та
+ * повідомляти про помилку.
+ */
+
+// const SAVED_LOGIN_DATA = "SAVED_LOGIN_DATA";
+// const USER_DATA = {
+//   email: "user@mail.com",
+//   password: "secret",
+// };
+
+/**
+ * ЗАДАЧА 4
+ * Кнопка increment має кожну секунду збільшувати значення на 1
+ * Кнопка decrement має кожну секунду зменшувати значення на 1
+ */
+
+/**
+ * ЗАДАЧА 5
+ * Переделай код так, чтобы все данные собирались
+ * единовременно и приходили в виде массива
+ */
+
+// const getData = () =>
+//   new Promise((res) => {
+//     setTimeout(() => {
+//       const data = 1;
+//       console.log(data);
+//       res(data);
+//     }, 1000);
+//   });
+
+// const getNewData = () =>
+//   new Promise((res) => {
+//     setTimeout(() => {
+//       const data = 2;
+//       console.log(data);
+//       res(data);
+//     }, 1000);
+//   });
+
+// const getAnotherData = () =>
+//   new Promise((res) => {
+//     setTimeout(() => {
+//       const data = 3;
+//       console.log(data);
+//       res(data);
+//     }, 1000);
+//   });
+
+// const getLastData = () =>
+//   new Promise((res) => {
+//     setTimeout(() => {
+//       const data = 4;
+//       console.log(data);
+//       res(data);
+//     }, 1000);
+//   });
+
+// const arr = [];
+
+
+/**
+ * ЗАДАЧА 6
+ * Функция startTimer должна логать каждый элемент массива раз в секунду.
+ * Когда очередь дойдет до последнего элемента массива, продолжить логать в обратном порядке
+ * до тех пор пока не дойдет до первого элемента, затем остановить процесс.
+ *
+ */
+
+/**
+ * ЗАДАЧА 7
+ * Функция countWithDelay принимает принимает 3 аргумента:
+ * 1) количество секунд перед тем как сработает ф-ция logCount
+ * 2) сколько раз должна отработать logCount
+ * 3) задержка между вызовами ф-ции
+ *
+ * logCount должна логировать кол-во вызовов
+ */
