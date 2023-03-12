@@ -1,8 +1,8 @@
-import {
-  getProducts,
-  getProductById,
-  createProduct,
-} from "./requests/products";
+// import {
+//   getProducts,
+//   getProductById,
+//   createProduct,
+// } from "./requests/products";
 import {
   createMarkupProducts,
   createMarkupProduct,
@@ -11,6 +11,7 @@ import {
 
 import "./styles/normalize.css";
 import "./styles/index.css";
+import  { ApiDummyJson } from './services/api';
 
 // console.log(getProducts());
 const productsList = document.querySelector("#allProducts");
@@ -19,28 +20,29 @@ const singleProduct = document.querySelector("#singleProduct");
 const addProductForm = document.querySelector("#add-product-form");
 const newProductElem = document.querySelector("#newProductSection");
 
-// singleProductForm.addEventListener("submit", findProductById);
+singleProductForm.addEventListener("submit", findProductById);
 addProductForm.addEventListener("submit", addProduct);
 
-// async function addAllProducts() {
-//   const {
-//     data: { products },
-//   } = await getProducts();
-//   createMarkupProducts(products, productsList);
-// }
+const apiDummyJson = new ApiDummyJson();
+async function addAllProducts() {
+  const {
+    data: { products },
+  } = await apiDummyJson.getProducts();
+  createMarkupProducts(products, productsList);
+}
 
-// addAllProducts();
+addAllProducts();
 
-// async function findProductById(evt) {
-//   evt.preventDefault();
+async function findProductById(evt) {
+  evt.preventDefault();
 
-//   const productId = evt.target.elements.id.value.trim();
-//   if (!productId) {
-//     return;
-//   }
-//   const { data } = await getProductById(productId);
-//   createMarkupProduct(data, singleProduct);
-// }
+  const productId = evt.target.elements.id.value.trim();
+  if (!productId) {
+    return;
+  }
+  const { data } = await apiDummyJson.getProductById(productId);
+  createMarkupProduct(data, singleProduct);
+}
 
 async function addProduct(e) {
   e.preventDefault();
@@ -48,7 +50,7 @@ async function addProduct(e) {
   const description = e.target.elements.description.value.trim();
   const price = e.target.elements.price.value.trim();
   const newProduct = { title, description, price };
-  const { data } = await createProduct(newProduct);
+  const { data } = await apiDummyJson.createProduct(newProduct);
   console.log(data);
   createMarkupAddProduct(data, newProductElem);
   e.target.reset();
