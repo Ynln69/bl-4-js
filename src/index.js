@@ -1,15 +1,26 @@
-import { getProducts, getProductById } from "./requests/products";
-import { createMarkupProducts, createMarkupProduct } from "./services/markupService";
+import {
+  getProducts,
+  getProductById,
+  createProduct,
+} from "./requests/products";
+import {
+  createMarkupProducts,
+  createMarkupProduct,
+  createMarkupAddProduct,
+} from "./services/markupService";
 
 import "./styles/normalize.css";
 import "./styles/index.css";
 
 // console.log(getProducts());
 const productsList = document.querySelector("#allProducts");
-const singleProductForm = document.querySelector('#singleProductForm');
-const singleProduct = document.querySelector('#singleProduct');
+const singleProductForm = document.querySelector("#singleProductForm");
+const singleProduct = document.querySelector("#singleProduct");
+const addProductForm = document.querySelector("#add-product-form");
+const newProductElem = document.querySelector("#newProductSection");
 
-singleProductForm.addEventListener('submit', findProductById);
+// singleProductForm.addEventListener("submit", findProductById);
+addProductForm.addEventListener("submit", addProduct);
 
 // async function addAllProducts() {
 //   const {
@@ -20,14 +31,25 @@ singleProductForm.addEventListener('submit', findProductById);
 
 // addAllProducts();
 
+// async function findProductById(evt) {
+//   evt.preventDefault();
 
-async function findProductById(evt) {
-  evt.preventDefault();
+//   const productId = evt.target.elements.id.value.trim();
+//   if (!productId) {
+//     return;
+//   }
+//   const { data } = await getProductById(productId);
+//   createMarkupProduct(data, singleProduct);
+// }
 
-  const productId = evt.target.elements.id.value.trim();
-  if(!productId) {
-    return;
-  }
-  const {data} = await getProductById(productId);
-  createMarkupProduct(data, singleProduct);
-};
+async function addProduct(e) {
+  e.preventDefault();
+  const title = e.target.elements.title.value.trim();
+  const description = e.target.elements.description.value.trim();
+  const price = e.target.elements.price.value.trim();
+  const newProduct = { title, description, price };
+  const { data } = await createProduct(newProduct);
+  console.log(data);
+  createMarkupAddProduct(data, newProductElem);
+  e.target.reset();
+}
