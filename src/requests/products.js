@@ -19,3 +19,11 @@ export async function getProductById(id) {
     console.log(error.message);
   }
 }
+
+export async function createProduct(newProduct) {
+  try {
+    return await apiDummyJson.post(`/products/add`, newProduct);
+  } catch (error) {
+    console.log(error.message);
+  }
+}

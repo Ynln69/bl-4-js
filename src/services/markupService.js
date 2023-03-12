@@ -10,6 +10,11 @@ export function createMarkupProducts(arr, ref) {
 };
 
 export function createMarkupProduct({ images, title, description }, ref) {
-  const markup = `<li><img src='${images[0]}' alt='${title}'><h2>${title}</h2><p>${description}</p></li>`;
+  const markup = `<img src='${images[0]}' alt='${title}'><h2>${title}</h2><p>${description}</p>`;
+  ref.innerHTML = markup;
+}
+
+export function createMarkupAddProduct({title, description, price}, ref) {
+  const markup = `<h2>${title}</h2><p>${description}</p><p>${price}</p>`;
   ref.innerHTML = markup;
 }
